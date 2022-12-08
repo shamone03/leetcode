@@ -1,7 +1,17 @@
+#include <iostream>
 #include "../datastructs/ListNode.h"
 
 ListNode* reverseList(ListNode* head) {
-    for (ListNode* i; i != nullptr; i = i->next) {
-        
+    ListNode* curr = head;
+    ListNode* prev = nullptr;
+    ListNode* next = nullptr;
+
+    while (curr != nullptr) {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
     }
+    head = prev;
+    return head;
 }
