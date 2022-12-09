@@ -11,5 +11,4 @@ ListNode* detectCycle(ListNode* head) {
         visited.insert(std::pair<ListNode*, int>(node, index));
     }
     return nullptr;
-    
 }

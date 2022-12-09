@@ -4,11 +4,13 @@
 #include "problems/pivotIndex.cpp"
 #include "problems/reverseList.cpp"
 #include "problems/middleNode.cpp"
+#include "problems/maxProfit.cpp"
 #include "datastructs/ListNode.h"
 
 
 int main() {
-    ListNode* l = new ListNode(0, new ListNode(1, new ListNode(2)));
-    std::cout << middleNode(l)->val << std::endl;
+    std::vector<int> v{7, 5, 3, 6, 4};
+
+    std::cout << maxProfit(v) << std::endl;
     return 0;
 }
