@@ -10,6 +10,7 @@
 #include "problems/randomizedSelect.cpp"
 #include "problems/wordPattern.cpp"
 #include "problems/detectCapitalUse.cpp"
+#include "problems/minDeletionSize.cpp"
 
 
 int main() {
@@ -19,8 +20,11 @@ int main() {
     // printVector(s);
     // std::cout << "hello world" << std::endl;
     // std::cout << "hello world" << std::endl;
-    
-    std::cout << detectCapitalUse("Leetcode") << std::endl;
+    std::vector<std::string> v{"cba","daf","ghi"};
+    for (int i = 1; i < v.size(); i++) {
+        std::cout << "i - 1: " + v[i - 1] << " i: " + v[i] << std::endl;
+    }
+    std::cout << minDeletionSize(v) << std::endl;
     
     // std::cout << maxProfit(v) << std::endl;
     return 0;
