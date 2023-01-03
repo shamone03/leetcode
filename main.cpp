@@ -9,6 +9,7 @@
 #include "problems/maxProfit.cpp"
 #include "problems/randomizedSelect.cpp"
 #include "problems/wordPattern.cpp"
+#include "problems/detectCapitalUse.cpp"
 
 
 int main() {
@@ -19,7 +20,7 @@ int main() {
     // std::cout << "hello world" << std::endl;
     // std::cout << "hello world" << std::endl;
     
-    std::cout << wordPattern("jquery", "jquery") << std::endl;
+    std::cout << detectCapitalUse("Leetcode") << std::endl;
     
     // std::cout << maxProfit(v) << std::endl;
     return 0;
