@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 
-int minFlipsMonoIncr(std::string s) {
+int minFlipsMonoIncrSlow(std::string s) {
     int leftOnes = 0;
     int rightZeroes = 0;
     int flips = 999999;
@@ -34,22 +34,32 @@ int minFlipsMonoIncr(std::string s) {
     return flips;
 }
 
-int minFlipsMonoIncrFast(std::string s) {
+int minFlipsMonoIncr(std::string s) {
     int leftOnes = 0;
     int rightZeroes = 0;
     int flips = 999999;
-    int *left = new int[s.length() + 1];
-    int *right = new int[s.length() + 1];
+    int* left = new int[s.length() + 1];
+    int* right = new int[s.length() + 1];
     for (int i = 0; i < (s.length() + 1); i++) {
         left[i] = 0;
         right[i] = 0;
     }
 
-    for (int i = 0; i < s.length(); i++) {
-        if (s[i] == '1') {
-            leftOnes++;
+    for (int i = 1; i <= s.length(); i++) {
+        if (s[i - 1] == '1') {
+            left[i] = ++leftOnes;
+        } else {
+            left[i] = leftOnes;
         }
-        std::cout << leftOnes << std::endl;
+    }
+    left[s.length()] = leftOnes;
+    right[s.length()] = 0;
+    for (int i = (s.length()); i > 0; i--) {
+        if (s[i - 1] == '0') {
+            right[i - 1] = ++rightZeroes;
+        } else {
+            right[i - 1] = rightZeroes;
+        }
     }
 
     for (int i = 0; i < (s.length() + 1); i++) {
@@ -58,15 +68,6 @@ int minFlipsMonoIncrFast(std::string s) {
         }
     }
 
-    for (int i = 0; i < (s.length() + 1); i++) {
-        std::cout << left[i] << ", ";
-    }
-    std::cout << std::endl;
-    for (int i = 0; i < (s.length() + 1); i++) {
-        std::cout << right[i] << ", ";
-    }
-    delete left;
-    delete right;
     return flips;
     // for (int i = 0; i < s.length(); i++) {
 

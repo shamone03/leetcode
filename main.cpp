@@ -25,8 +25,8 @@ int main() {
     // std::cout << "hello world" << std::endl;
 
     // double x = 2.2;
-    int min = minFlipsMonoIncrFast("00110");
-    // std::cout << min << std::endl;
+    int min = minFlipsMonoIncr("00011000");
+    std::cout << min << std::endl;
 
     // std::vector<std::vector<int>> v0{{10,16},{2,8},{1,6},{7,12}};
     // std::vector<std::vector<int>> v1{{1,2},{3,4},{5,6},{7,8}};
