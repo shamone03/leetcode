@@ -11,6 +11,9 @@
 #include "problems/wordPattern.cpp"
 #include "problems/detectCapitalUse.cpp"
 #include "problems/minDeletionSize.cpp"
+#include "problems/myPow.cpp"
+#include "problems/findMinArrowShots.cpp"
+#include "problems/minFlipsMonoIncr.cpp"
 
 
 int main() {
@@ -20,12 +23,16 @@ int main() {
     // printVector(s);
     // std::cout << "hello world" << std::endl;
     // std::cout << "hello world" << std::endl;
-    std::vector<std::string> v{"cba","daf","ghi"};
-    for (int i = 1; i < v.size(); i++) {
-        std::cout << "i - 1: " + v[i - 1] << " i: " + v[i] << std::endl;
-    }
-    std::cout << minDeletionSize(v) << std::endl;
-    
+
+    // double x = 2.2;
+    int min = minFlipsMonoIncrFast("00110");
+    // std::cout << min << std::endl;
+
+    // std::vector<std::vector<int>> v0{{10,16},{2,8},{1,6},{7,12}};
+    // std::vector<std::vector<int>> v1{{1,2},{3,4},{5,6},{7,8}};
+    // std::cout << findMinArrowShots(v0) << std::endl;
+
+    // std::cout << (double) ((long) x >> 2) << std::endl;
     // std::cout << maxProfit(v) << std::endl;
     return 0;
 }
