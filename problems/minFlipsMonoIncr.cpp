@@ -1,5 +1,7 @@
+#pragma once
 #include <string>
 #include <iostream>
+#include <limits.h>
 
 int minFlipsMonoIncrSlow(std::string s) {
     int leftOnes = 0;
@@ -37,13 +39,9 @@ int minFlipsMonoIncrSlow(std::string s) {
 int minFlipsMonoIncr(std::string s) {
     int leftOnes = 0;
     int rightZeroes = 0;
-    int flips = 999999;
-    int* left = new int[s.length() + 1];
-    int* right = new int[s.length() + 1];
-    for (int i = 0; i < (s.length() + 1); i++) {
-        left[i] = 0;
-        right[i] = 0;
-    }
+    int flips = INT32_MAX;
+    int* left = new int[s.length() + 1]{0};
+    int* right = new int[s.length() + 1]{0};
 
     for (int i = 1; i <= s.length(); i++) {
         if (s[i - 1] == '1') {
@@ -54,7 +52,7 @@ int minFlipsMonoIncr(std::string s) {
     }
     left[s.length()] = leftOnes;
     right[s.length()] = 0;
-    for (int i = (s.length()); i > 0; i--) {
+    for (int i = s.length(); i > 0; i--) {
         if (s[i - 1] == '0') {
             right[i - 1] = ++rightZeroes;
         } else {
@@ -68,26 +66,7 @@ int minFlipsMonoIncr(std::string s) {
         }
     }
 
+    delete left;
+    delete right;
     return flips;
-    // for (int i = 0; i < s.length(); i++) {
-
-    //     if (flips > (leftOnes + rightZeroes)) {
-    //         flips = leftOnes + rightZeroes;
-    //     }
-    //     rightZeroes = 0;
-    //     if (s[i] == '1') {
-    //         leftOnes++;
-    //     }
-
-    //     for (int j = i + 1; j < s.length(); j++) {
-    //         if (s[j] == '0') {
-    //             rightZeroes++;
-    //         }
-    //     }
-    // }
-    // if (flips > (leftOnes + rightZeroes)) {
-    //     flips = leftOnes + rightZeroes;
-    // }
-
-    // return flips;
 }
