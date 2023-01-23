@@ -1,6 +1,19 @@
 #include <vector>
 #include <limits.h>
 
+int removeDuplicates(std::vector<int>& nums) {
+    int newRepeat = INT32_MIN;
+    int k = 0;
+
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] > newRepeat) {
+            newRepeat = nums[i];
+            nums[k++] = nums[i];
+        }
+    }
+
+    return k;
+}
 
 int removeDuplicatesSlow(std::vector<int>& nums) {
     int k = nums.size();
