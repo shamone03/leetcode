@@ -5,12 +5,12 @@
 #include "datastructs/printVector.cpp"
 #include "problems/removeDuplicates.cpp"
 #include "problems/removeElement.cpp"
+#include "problems/searchInsert.cpp"
 
 int main() {
-    std::vector v{0,1,2,2,3,0,4,2};
+    std::vector v{1,3,5,6};
 
-    std::cout << removeElement(v, 2) << std::endl;
+    std::cout << searchInsert(v, 2) << std::endl;
     
-    printVector(v);
     return 0;
 }
