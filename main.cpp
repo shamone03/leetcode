@@ -7,8 +7,9 @@
 #include "problems/removeElement.cpp"
 #include "problems/searchInsert.cpp"
 #include "problems/tribonacci.cpp"
+#include "problems/lengthOfLastWord.cpp"
 
 int main() {
-    std::cout << tribonacci(25) << std::endl;
+    std::cout << lengthOfLastWord("a") << std::endl;
     return 0;
 }
