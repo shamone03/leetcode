@@ -6,11 +6,9 @@
 #include "problems/removeDuplicates.cpp"
 #include "problems/removeElement.cpp"
 #include "problems/searchInsert.cpp"
+#include "problems/tribonacci.cpp"
 
 int main() {
-    std::vector v{1,3,5,6};
-
-    std::cout << searchInsert(v, 2) << std::endl;
-    
+    std::cout << tribonacci(25) << std::endl;
     return 0;
 }
