@@ -8,8 +8,9 @@
 #include "problems/searchInsert.cpp"
 #include "problems/tribonacci.cpp"
 #include "problems/lengthOfLastWord.cpp"
+#include "problems/mySqrt.cpp"
 
 int main() {
-    std::cout << lengthOfLastWord("a") << std::endl;
+    std::cout << mySqrt(2) << std::endl;
     return 0;
 }
