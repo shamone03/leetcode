@@ -1,18 +1,18 @@
 #include <iostream>
 #include <vector>
 #include <string>
-// #include "problems/longestPalindrome.cpp"
-#include "problems/isPalindrome.cpp"
+#include "problems/longestPalindrome.cpp"
+// #include "problems/isPalindrome.cpp"
 
 int main() {
     // lengthOfLongestSubstring("bbbbb");
-    std::string s = ".,";
+    std::string s = "cbbd";
 
     // for (int i = 0; i < s.size(); i++) {
     //     s[i] = tolower(s[i]);
     // }
 
-    std::cout << isPalindrome(s) << std::endl;
+    std::cout << longestPalindrome(s) << std::endl;
     
     // std::map<char, int> m;
     // std::cout << m.insert({'a', 0}).first->second << std::endl;

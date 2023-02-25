@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 
 bool isPalindrome(std::string s) {
@@ -5,8 +6,12 @@ bool isPalindrome(std::string s) {
     int l = 0;
     int r = s.size() - 1;
     while (l < r) {
-        while (!isalnum(s[l++]) && l < s.size());
-        while (!isalnum(s[r--]) && r > 0);
+        while (!isalnum(s[l]) && l < s.size()) {
+            l++;
+        }
+        while (!isalnum(s[r]) && r > 0) {
+            r--;
+        }
         if (r < l) return true;
         if (tolower(s[l]) == tolower(s[r])) {
             l++;
