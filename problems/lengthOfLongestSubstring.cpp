@@ -14,7 +14,7 @@ int lengthOfLongestSubstring(std::string s) {
             longest = (m.size() > longest) ? m.size() : longest;
             i = insertRes.first->second + 1;
             m.clear();
-            if (i < (m.size() - 1)) m.insert(std::pair<char, int>(s[i], i));
+            m.insert(std::pair<char, int>(s[i], i));
             
         }
     }
