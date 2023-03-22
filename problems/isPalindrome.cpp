@@ -6,12 +6,8 @@ bool isPalindrome(std::string s) {
     int l = 0;
     int r = s.size() - 1;
     while (l < r) {
-        while (!isalnum(s[l]) && l < s.size()) {
-            l++;
-        }
-        while (!isalnum(s[r]) && r > 0) {
-            r--;
-        }
+        while (!isalnum(s[l]) && l < s.size()) l++;
+        while (!isalnum(s[r]) && r > 0) r--;
         if (r < l) return true;
         if (tolower(s[l]) == tolower(s[r])) {
             l++;
@@ -19,7 +15,6 @@ bool isPalindrome(std::string s) {
         } else {
             return false;
         }
-        
     }
     return true;
 }
@@ -37,8 +32,6 @@ bool isPalindromeRecursive(std::string s) {
         s[s.size() - 1] = tolower(s[s.size() - 1]);
     }
     if (s.size() == 0) return true;
-
-
     if (s[0] == s[s.size() - 1]) return isPalindrome(s.substr(1, s.size() - 2));
 
     return false;
