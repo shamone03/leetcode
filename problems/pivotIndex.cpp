@@ -1,4 +1,5 @@
 #include "runningSum.cpp"
+// https://leetcode.com/problems/find-pivot-index/
 
 int pivotIndex(std::vector<int> &nums) {
     runningSum(nums);

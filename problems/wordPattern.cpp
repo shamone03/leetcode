@@ -2,6 +2,7 @@
 #include <cstring>
 #include <iostream>
 #include <map>
+// https://leetcode.com/problems/word-pattern/
 
 bool wordPattern(std::string pattern, std::string s) {
     char* tokens = strtok(const_cast<char*>(s.c_str()), " ");

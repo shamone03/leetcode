@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/sqrtx/
+
 int mySqrt(int x) {
     if (x < 2) return x;
     for (long i = 0; i <= x; i++) {

@@ -1,4 +1,5 @@
 #include <string>
+// https://leetcode.com/problems/length-of-last-word/
 
 int lengthOfLastWord(std::string s) {
     int n = 0;

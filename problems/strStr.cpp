@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+// https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
 
 int strStr(std::string haystack, std::string needle) {
     int j = 0;

@@ -1,4 +1,5 @@
 #include <string>
+// https://leetcode.com/problems/detect-capital/
 
 bool detectCapitalUse(std::string word) {
     if (word.length() == 1) {

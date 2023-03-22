@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+// https://leetcode.com/problems/valid-palindrome/
 
 bool isPalindrome(std::string s) {
     if (s.size() < 2) return true;

@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "isPalindrome.cpp"
+// https://leetcode.com/problems/longest-palindromic-substring/
 
 std::string longestPalindrome(std::string s) {
     if (s.size() == 1 || isPalindrome(s)) return s;

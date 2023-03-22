@@ -1,5 +1,6 @@
 #include <vector>
 #include <limits.h>
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 int removeDuplicates(std::vector<int>& nums) {
     int newRepeat = INT32_MIN;
@@ -31,7 +32,7 @@ int removeDuplicatesSlow(std::vector<int>& nums) {
             j++;
         } else {
             
-            if ((j - i) > 1) {                
+            if ((j - i) > 1) {
                 int i0 = i;
                 int j0 = j;
                 while (j0 < nums.size()) {

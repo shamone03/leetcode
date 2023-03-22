@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+// https://leetcode.com/problems/delete-columns-to-make-sorted/
 
 int minDeletionSize(std::vector<std::string> &strs) {
     int count = 0;
