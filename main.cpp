@@ -5,9 +5,10 @@
 #include "datastructs/printVector.cpp"
 // #include "problems/isPalindrome.cpp"
 #include "problems/strStr.cpp"
-#include "problems/climbStairs.cpp"
+#include "problems/canPlaceFlowers.cpp"
 
 int main() {
-    std::cout << climbStairs(45) << std::endl;
+    std::vector<int> v{1,0,0,0,1,0,0};
+    std::cout << canPlaceFlowers(v, 2) << std::endl;
     return 0;
 }
