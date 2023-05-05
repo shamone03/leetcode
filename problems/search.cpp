@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/binary-search/submissions/945202839/
+
 #include <vector>
 using std::vector;
 
