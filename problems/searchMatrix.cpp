@@ -10,7 +10,7 @@ bool searchMatrix(vector<vector<int>>& matrix, int target) {
     int rnorm = ((matrix.size() - 1) * s) + matrix[0].size() - 1;
 
     int mid = (rnorm - l) / 2;
-    int* m = new int[2]{};
+    int m[2]{0};
 
     while (l <= rnorm) {
         mid = l + ((rnorm - l) / 2);
