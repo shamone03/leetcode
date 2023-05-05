@@ -5,14 +5,11 @@
 using std::vector;
 
 bool searchMatrix(vector<vector<int>>& matrix, int target) {
-    int* l = new int[2]{0, 0};
-
-    long long unsigned int* r = new long long unsigned int[2]{matrix.size() - 1, matrix[0].size() - 1};
     int s = matrix[0].size();
-    int lnorm = (l[0] * s) + l[1];
-    int rnorm = (r[0] * s) + r[1];
+    int lnorm = 0;
+    int rnorm = ((matrix.size() - 1) * s) + matrix[0].size() - 1;
 
-    int mnorm;
+    int mnorm = (rnorm - lnorm) / 2;
     int* m = new int[2]{};
 
     while (lnorm <= rnorm) {
