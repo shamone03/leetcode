@@ -6,22 +6,22 @@ double myPow(double x, int n) {
     }
 
     long double prod = 1;
-    int exp = n < 0 ? -1 * n : n;
-    if (n % 2 == 0) {
-        if (n < 0) {
-            
-            unsigned i = *(unsigned*) &x;
-            i >>= exp - 1;
-            return *((double*) &i);
-        }
-        if (n > 0) {
+    long exp = n < 0 ? -1 * n : n;
+    // if (n % 2 == 0) {
+    //     if (n < 0) {
 
-            unsigned i = *(unsigned*) &x;
-            i <<= exp - 1;
-            return *((double*) &i);
-        }
-    }
-    for (int i = 0; i < exp; i++) {
+    //         unsigned i = *(unsigned*) &x;
+    //         i >>= exp - 1;
+    //         return (x >> (exp - 1));
+    //     }
+    //     if (n > 0) {
+
+    //         unsigned i = *(unsigned*) &x;
+    //         i <<= exp - 1;
+    //         return (x << (exp - 1));
+    //     }
+    // }
+    for (long i = 0; i < exp; i++) {
         prod *= x;
     }
 

@@ -5,7 +5,7 @@
 #include "datastructs/printVector.cpp"
 // #include "problems/isPalindrome.cpp"
 #include "problems/strStr.cpp"
-#include "problems/searchMatrix.cpp"
+#include "problems/myPow.cpp"
 
 int main() {
     std::vector<std::vector<int>> v{
@@ -14,7 +14,7 @@ int main() {
         {23, 30, 34, 60}
     };
     // searchMatrix(v, 3);
-    std::cout << searchMatrix(v, 2) << std::endl;
+    std::cout << myPow(2, -2147483648) << std::endl;
 
     // for (int i = 0; i < v.size(); i++) {
     //     for (int j = 0; j < v[i].size(); j++) {
