@@ -15,5 +15,5 @@ int partitionString(string s) {
         }
     }
 
-    return partitions;
+    return ++partitions;
 }
